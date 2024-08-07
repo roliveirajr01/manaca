@@ -1,0 +1,242 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+html {
+  --font: "Poppins", sans-serif;
+  --font-title: "Poppins", sans-serif;
+  --font-size: 1.25rem;
+  --color: #a8f;
+  --color-light: #edf;
+  --color-dark: #206;
+  --radius: 0.25rem;
+  --color-1: #1a1a1a;
+  --color-2: #ffffff;
+  --color-3: #9d77f1;
+  background-color: var(--color-1);
+  color: var(--color-2);
+}
+
+ul,
+li {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-2);
+}
+
+.container {
+  width: 1400px;
+  margin: 0 auto;
+}
+
+body,
+input,
+textarea,
+button {
+  font-size: var(--font-size);
+  font-family: var(--font);
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-title);
+}
+
+h1,
+h2,
+h3,
+p,
+ul {
+  margin: 1rem 0;
+}
+
+ul {
+  list-style: square;
+}
+
+li {
+  margin-bottom: 0.5rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+input,
+textarea {
+  display: block;
+  border: 1px solid #ccc;
+  width: 100%;
+  max-width: 30rem;
+  padding: 0.75rem;
+  border-radius: var(--radius);
+  background: #eee;
+  transition: 0.2s;
+  margin-bottom: 1rem;
+}
+
+input[type="checkbox"] {
+  display: inline-block;
+  width: auto;
+  margin: 0 0.5rem 0 0;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--color);
+  background: white;
+  box-shadow: 0 0 0 3px var(--color-light);
+}
+
+button {
+  font-size: 1.125rem;
+  display: block;
+  cursor: pointer;
+  border: none;
+  border-radius: var(--radius);
+  transition: 0.1s;
+  background: var(--color);
+  color: var(--color-dark);
+  padding: 0.6em 1.2em;
+  margin-bottom: 1rem;
+  line-height: 1;
+}
+
+button:hover,
+button:focus {
+  background: var(--color);
+  box-shadow: 0 0 0 3px var(--color-light), 0 0 0 4px var(--color);
+  outline: none;
+}
+
+button:active {
+  box-shadow: 0 0 0 3px var(--color), 0 0 0 4px var(--color);
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: wait;
+}
+
+hr {
+  border: 2px solid #eee;
+  margin: 2rem auto;
+}
+
+video,
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.flex {
+  display: flex;
+  gap: 1rem;
+}
+
+.menu {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+  padding: 0;
+}
+
+.animeLeft {
+  opacity: 0;
+  transform: translateX(-20px);
+  animation: animeLeft 0.5s forwards;
+}
+
+@keyframes animeLeft {
+  to {
+    opacity: 1;
+    transform: initial;
+  }
+}
+
+.animeRight {
+  opacity: 0;
+  transform: translateX(20px);
+  animation: animeRight 0.5s forwards;
+}
+
+@keyframes animeRight {
+  to {
+    opacity: 1;
+    transform: initial;
+  }
+}
+
+.animeTop {
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: animeTop 0.5s forwards;
+}
+
+@keyframes animeTop {
+  to {
+    opacity: 1;
+    transform: initial;
+  }
+}
+
+.animeBottom {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: animeBottom 0.5s forwards;
+}
+
+@keyframes animeBottom {
+  to {
+    opacity: 1;
+    transform: initial;
+  }
+}
+
+* [data-anime="scroll"] {
+  opacity: 0;
+  transform: translate3d(-30px, 0, 0);
+  transition: 0.3s;
+}
+
+* [data-anime="scroll"].ativo {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+@media (max-width: 1400px) {
+  .container {
+    max-width: 1200px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .container {
+    max-width: 1000px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .container {
+    max-width: 100%;
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 0 10px;
+  }
+}

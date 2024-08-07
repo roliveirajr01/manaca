@@ -1,0 +1,144 @@
+.bannerTop {
+  position: relative;
+}
+
+.wallpapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.contentText {
+  padding: 100px 0;
+  max-width: 565px;
+}
+.contentText h2 {
+  font-size: 52.8px;
+  font-weight: 600;
+}
+
+.contentText h2 span {
+  color: #9d77f1;
+}
+
+.contentText .callMe {
+  display: flex;
+  flex-flow: row;
+  background-color: var(--color-3);
+  width: fit-content;
+  font-size: 16px;
+  padding: 10px 15px;
+  align-items: center;
+  border-radius: 30px;
+}
+
+.callMe svg {
+  margin-left: 15px;
+}
+.contentImg {
+  display: flex;
+  align-items: center;
+  position: relative;
+  height: fit-content;
+}
+
+.contentImg .computer {
+  width: 350px;
+  position: relative;
+  z-index: 2;
+}
+
+.contentImg .paper {
+  position: absolute;
+  bottom: 50px;
+  left: 0;
+}
+
+.contentImg .square {
+  position: absolute;
+  top: -10px;
+  left: 20px;
+  z-index: 3;
+  width: 100px;
+}
+
+.contentImg .letterN {
+  position: absolute;
+  top: -50px;
+  right: 0px;
+  z-index: 3;
+  width: 150px;
+}
+
+.contentImg .letterD {
+  position: absolute;
+  bottom: 10px;
+  right: -50px;
+  z-index: 3;
+  width: 150px;
+}
+
+.contentImg .hand {
+  position: absolute;
+  right: -170px;
+}
+
+.contentImg .letterDOuther {
+  position: absolute;
+  left: -90px;
+  width: 170px;
+}
+
+.contentImg .stick {
+  position: absolute;
+  bottom: -40px;
+  width: 80px;
+  left: -30px;
+}
+
+.contentImg .linesMargin {
+  position: absolute;
+}
+
+@media (max-width: 920px) {
+  .contentText {
+    max-width: 500px;
+    text-align: center;
+    padding: 40px 0;
+    margin: 0 auto;
+  }
+  .contentText h2 {
+    font-size: 35.8px;
+  }
+  .contentImg {
+    display: none;
+  }
+
+  .contentText .callMe {
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 525px) {
+  .contentText {
+    max-width: 370px;
+    padding: 100px 0;
+  }
+  .contentText h2 {
+    font-size: 25.8px;
+  }
+
+  .contentText .callMe {
+    font-size: 14px;
+  }
+}

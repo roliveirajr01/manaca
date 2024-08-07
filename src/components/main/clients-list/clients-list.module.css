@@ -1,0 +1,105 @@
+.clientsList ul {
+  display: flex;
+  flex-flow: wrap;
+  margin: 0;
+}
+
+.clientsList li {
+  width: 33.33%;
+  position: relative;
+  overflow: hidden;
+  margin: 0;
+}
+
+.clientsList div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(157 119 241 / 72%);
+  transition: all 0.3s ease;
+}
+
+.clientsList p {
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.toRight div {
+  left: -110%;
+  top: 0;
+}
+
+.toRight:hover div {
+  left: 0;
+  transition: all 0.3s ease;
+}
+
+.toTop div {
+  bottom: -110%;
+}
+
+.toTop:hover div {
+  bottom: 0;
+  left: 0;
+  transition: all 0.3s ease;
+}
+
+.toBottom div {
+  top: -110%;
+}
+
+.toBottom:hover div {
+  top: 0;
+  left: 0;
+  transition: all 0.3s ease;
+}
+
+.toLeft div {
+  right: -110%;
+  top: 0;
+}
+
+.toLeft:hover div {
+  right: 0;
+  transition: all 0.3s ease;
+}
+
+@media (max-width: 1180px) {
+  .clientsList p {
+    font-size: 40px;
+  }
+
+  .clientsList div {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: solid 0.5px rgb(255 255 255 / 51%);
+  }
+}
+
+@media (max-width: 920px) {
+  .clientsList li {
+    width: 50%;
+  }
+
+  .clientsList p {
+    font-size: 35px;
+  }
+}
+
+@media (max-width: 590px) {
+  .clientsList p {
+    font-size: 25px;
+  }
+}
+
+@media (max-width: 430px) {
+  .clientsList p {
+    font-size: 20px;
+  }
+}

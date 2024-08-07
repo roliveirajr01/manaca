@@ -1,0 +1,45 @@
+.ourWork {
+  padding: 75px 0;
+}
+.ourWork div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ourWork p {
+  font-size: 30px;
+}
+
+.ourWork a {
+  display: flex;
+  width: fit-content;
+  height: fit-content;
+  align-items: center;
+  padding: 10px 20px;
+  background: var(--color-3);
+  border-radius: 30px;
+  font-size: 16px;
+  margin-left: 30px;
+}
+
+.ourWork a svg {
+  margin-left: 15px;
+}
+
+@media (max-width: 830px) {
+  .ourWork {
+    padding: 15px 0;
+    text-align: center;
+  }
+  .ourWork div {
+    flex-flow: column;
+  }
+  .ourWork p {
+    font-size: 23px;
+  }
+  .ourWork a {
+    padding: 5px 20px;
+    margin: 0;
+  }
+}

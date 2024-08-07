@@ -1,0 +1,128 @@
+.menu {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-around;
+  font-size: 16px;
+  align-items: center;
+}
+
+.menu ul {
+  display: flex;
+}
+
+.menu li a {
+  display: block;
+  margin-right: 25px;
+}
+
+.buttonWhatsapp {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  border: solid 1px;
+  border-radius: 30px;
+  padding: 10px 15px;
+}
+
+.buttonWhatsapp svg {
+  margin-right: 10px;
+}
+
+.optionsListMobile {
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  .buttonWhatsapp span {
+    display: none;
+  }
+
+  .buttonWhatsapp svg {
+    margin-right: 0;
+  }
+}
+
+.hamburgerButton {
+  display: none;
+}
+
+@media (max-width: 965px) {
+  .menu {
+    justify-content: space-between;
+  }
+  .menu .optionsListDesktop {
+    display: none;
+  }
+
+  .hamburgerButton {
+    display: flex;
+    flex-flow: column;
+    position: relative;
+    left: 0;
+    transition: left 0.5s ease;
+    height: 50px;
+    z-index: 8;
+  }
+
+  .hamburgerButton.active {
+    left: 230px;
+    transition: left 0.5s ease;
+  }
+
+  .hamburgerButton.active span:nth-child(1) {
+    display: none;
+  }
+
+  .hamburgerButton.active span:nth-child(2) {
+    transform: rotate(40deg);
+    transition: all 0.5s ease;
+  }
+
+  .hamburgerButton.active span:nth-child(3) {
+    transform: rotate(137deg);
+    position: relative;
+    top: -11px;
+    transition: all 0.5s ease;
+  }
+
+  .hamburgerButton span {
+    width: 30px;
+    height: 2.5px;
+    background-color: var(--color-3);
+    display: block;
+    margin-bottom: 10px;
+    position: relative;
+    top: 0;
+    transition: all 0.5s ease;
+  }
+
+  .optionsListMobile {
+    position: fixed;
+    top: 0;
+    left: -260px;
+    padding: 0 30px;
+    background-color: var(--color-3);
+    height: 100vh;
+    transition: left 0.5s ease;
+    display: block;
+    z-index: 8;
+  }
+
+  .optionsListMobile.active {
+    left: 0;
+    transition: left 0.5s ease;
+  }
+}
+
+@media (max-width: 600px) {
+  header img {
+    width: 140px;
+  }
+
+  .hamburgerButton {
+    top: 15px;
+  }
+  .buttonWhatsapp {
+    padding: 9px 9px;
+  }
+}

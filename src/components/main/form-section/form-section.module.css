@@ -1,0 +1,106 @@
+.formSection {
+  padding: 75px 0;
+  background-color: var(--color-3);
+}
+
+.formSection h2 {
+  text-align: center;
+  font-weight: 600;
+  font-size: 45px;
+  max-width: 393px;
+  margin: 0 auto;
+  margin-bottom: 50px;
+}
+
+.formSection label p {
+  font-size: 15px;
+  font-weight: 400;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.formSection form {
+  margin: 0 auto;
+  display: blocks;
+}
+
+.row {
+  display: flex;
+  width: 940px;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.row input {
+  width: 455px;
+  border-radius: 15px;
+}
+
+.messageArea {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.row textarea {
+  max-width: inherit;
+  max-height: inherit;
+  height: 53.41px;
+}
+
+.messageForm {
+  justify-content: start;
+}
+.messageForm input[type="checkbox"] {
+  margin-bottom: 10px;
+}
+.messageForm label {
+  display: flex;
+  align-items: center;
+}
+.messageForm p {
+  margin: 0;
+  padding: 0;
+}
+
+.buttonSend {
+  width: 100%;
+  border-radius: 7px 0px 0px 0px;
+  background-color: var(--color-1);
+  text-align: center;
+  padding: 15px 0;
+}
+
+@media (max-width: 1024px) {
+  .formSection {
+    padding: 30px 0;
+  }
+  .formSection h2 {
+    font-size: 40px;
+    margin-bottom: 25px;
+  }
+  .row {
+    width: 100%;
+    flex-flow: column;
+  }
+  .row input {
+    width: 100%;
+    max-width: 100%;
+  }
+  .row label {
+    width: 100%;
+  }
+}
+
+@media (max-width: 400px) {
+  .formSection h2 {
+    font-size: 35px;
+    margin-bottom: 20px;
+  }
+  .row input {
+    margin-bottom: 0;
+  }
+  .buttonSend {
+    padding: 10px 0;
+  }
+}
